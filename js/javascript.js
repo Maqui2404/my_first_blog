@@ -36,14 +36,35 @@ function sendEmail() {
   });
 }
 
-document.addEventListener("keyup", (e) => {
-  if (e.target.matches("#buscador1")) {
-    if (e.key == "Escape") e.target.value = "";
 
+document.addEventListener("keyup", (e) => {
+  var input, filter, section, div, h1, i;
+  input = document.getElementById("buscador1");
+  filter = input.value.toUpperCase();
+  section = document.getElementById("main");
+  div = section.getElementsByTagName("div");
+  for (i = 0; i < div.length; i++) {
+    h1 = div[i].getElementsByTagName("p")[0];
+    if (h1) {
+      if (h1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        div[i].style.display = "";
+      } else {
+        div[i].style.display = "none";
+      }
+    }
+  }
+  }
+);
+
+/*document.addEventListener("keyup", (e) => {
     document.querySelectorAll("#pais").forEach((counpais) => {
       counpais.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-        ? counpais.classList.remove("#pais")
+        ? counpais.classList.remove(".country")
         : counpais.classList.add("filtro");
     });
   }
-});
+);
+*/
+
+
+
