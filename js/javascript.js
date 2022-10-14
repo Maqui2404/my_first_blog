@@ -69,3 +69,41 @@ document.addEventListener("keyup", (e) => {
 
 
 
+
+
+
+// function sendEmail() {
+//   Email.send({
+//     Host: "marfimaqui@gmail",
+//     Username: "sender@email_address.com",
+//     Password: "Enter your password",
+//     To: 'marfimaqui@gmail.com',
+//     From: "sender@email_address.com",
+//     Subject: "Sending Email using javascript",
+//     Body: "Well that was easy!!",
+//   })
+//     .then(function (message) {
+//       alert("mail sent successfully")
+//     });
+// }
+
+const $form = document.querySelector("#form");
+const $buttonMailto = document.querySelector("#panta")
+
+$form.addEventListener('submit', handleSubmit)
+
+function handleSubmit(event){
+  event.preventDefault()
+  const form = new FormData(this)
+  console.log(form.get("name"))
+  $buttonMailto.setAttribute('href',"mailto:marfimaqui@gmail.com?subject=nombre ${form.get('name')} correo ${form.get('email')}&body=${form.get('message')}")
+  $buttonMailto.click()
+}
+
+
+// const nav = document.querySelector('.nav');
+
+// window.addEventListener('scroll', function(){
+//   nav.classList.toggle('active',window.scrollY > 0)
+// })
+
