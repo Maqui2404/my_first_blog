@@ -38,15 +38,16 @@ function sendEmail() {
 
 
 document.addEventListener("keyup", (e) => {
-  var input, filter, section, div, h1, i;
+  var input, filter, section, div, h5, i,p;
   input = document.getElementById("buscador1");
   filter = input.value.toUpperCase();
   section = document.getElementById("main");
   div = section.getElementsByTagName("div");
   for (i = 0; i < div.length; i++) {
-    h1 = div[i].getElementsByTagName("p")[0];
-    if (h1) {
-      if (h1.innerHTML.toUpperCase().indexOf(filter) > -1) {
+    p = div[i].getElementsByTagName("p")[0];
+    h5 = div[i].getElementsByTagName("h5")[0];
+    if (p || h5) {
+      if ((p.innerHTML.toUpperCase().indexOf(filter) > -1) || (h5.innerHTML.toUpperCase().indexOf(filter) > -1)) {
         div[i].style.display = "";
       } else {
         div[i].style.display = "none";

@@ -11,6 +11,116 @@
     />
   </head>
   <body>
+
+    <header class="bg-white text-center m-0">
+      <div class="container">
+        <div class="row">
+          <div class="col text-dark p-2">
+            <div id="current_date"></div>
+          </div>
+          <div class="col-8">
+            <h1
+              class="text-dark text-center"
+              style="font-family: fantasy; font-size: 80px"
+            >
+              MBlog
+            </h1>
+            <h8>VIAJA CON MBlog</h8>
+          </div>
+          <div class="col py-2">
+            <a class="btn btn-secondary mb-1" href="../src/login.html">Log in</a>
+            <a class="btn btn-secondary" href="../src/login.html">Subscribete</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- =================================================== -->
+    <!-- ======================= nav ======================= -->
+    <!-- =================================================== -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center text-light my-2"
+    >
+      <div class="container-fluid px-5 justify-content-center">
+        <a class="navbar-brand text-light" href="#"
+          ><img src="logoMBlog.png" width="90px" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-light"
+                aria-current="page"
+                href="../index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="src/blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-light"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Continentes
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="africa.html">África</a></li>
+                <li>
+                  <a class="dropdown-item" href="america.html">America</a>
+                </li>
+                <li><a class="dropdown-item" href="asia.html">Asia</a></li>
+                <li><a class="dropdown-item" href="europa.html">Europa</a></li>
+                <li>
+                  <a class="dropdown-item" href="osceania.html">Osceania</a>
+                </li>
+
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Antartida</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link disabled"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Disabled</a
+              >
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success text-light" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
     <section class="vh-100" style="background-color: #617e9a">
       <div class="container py-3 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -90,5 +200,7 @@
         </div>
       </div>
     </section>
+
+    <script src="../js/javascript.js"></script>
   </body>
 </html>
